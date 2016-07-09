@@ -1,0 +1,59 @@
+/*全局样式*/
+*{
+    margin:0;
+    padding:0;
+}
+
+/*页眉导航部分*/
+.nav{
+    height:50px;
+    width:100%;
+    position: fixed;
+    top:0;
+    left:0;
+    background-color: rgb(243,62,62);
+    z-index:99999;
+}
+.nav-logo{
+	background-image: url(../img/logo.jpg) ;
+	background-size:56px 22px; 
+	margin:14px 0 0 12px;
+	float:left;
+}
+.nav-logo a{
+	display:block;
+	text-indent: -9999px;
+	overflow: hidden;
+	height:22px;
+	width:56px;
+}
+.nav-search{
+	width:245px;
+	height: 30px;
+	position: absolute;
+	left: 0;
+	top:0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+
+}
+.nav-search input{
+	width:213px;
+	line-height: 30px;
+	border-radius:18px;
+	border:none;
+	padding-left:32px;
+}
+.nav-search input:focus{
+	outline: none;
+}
+.nav-menu{
+	height: 22px;
+	width: 27px;
+	background-image: url(../img/menu.jpg) ;
+	background-size:27px 22px; 
+	margin:14px 18px 0 0;
+	float:right;
+	cursor: pointer;
+}
