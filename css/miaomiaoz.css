@@ -3,11 +3,34 @@
     margin:0;
     padding:0;
 }
+@media screen and (min-width: 320px) {
+    html {
+        font-size:53.3%!important
+    }
+}
+
+@media screen and (min-width: 375px) {
+    html {
+        font-size:62.5%!important
+    }
+}
+
+@media screen and (min-width: 414px) {
+    html {
+        font-size:69%!important
+    }
+}
+
+@media screen and (min-width: 768px) {
+    html {
+        font-size:106%!important
+    }
+}
 .font-min{
-	font-size: 13px;
+	font-size: 1.3rem;
 }
 .font-max{
-	font-size: 14px;
+	font-size: 1.4rem;
 }
 .font-red{
 	color:rgb(243,62,62);
@@ -18,7 +41,7 @@
 
 /*页眉导航部分*/
 .nav{
-    height:50px;
+    height:5.0rem;
     width:100%;
     position: fixed;
     top:0;
@@ -28,20 +51,21 @@
 }
 .nav-logo{
 	background-image: url(../img/logo.jpg) ;
-	background-size:56px 22px; 
-	margin:14px 0 0 12px;
+	background-size:100% 100%; 
+	width:14%;
+	margin:1.4rem 0 0 1.2rem;
 	float:left;
 }
 .nav-logo a{
 	display:block;
-	text-indent: -9999px;
+	text-indent: -999.9rem;
 	overflow: hidden;
-	height:22px;
-	width:56px;
+	height:2.2rem;
+	/*width:5.6rem;*/
 }
 .nav-search{
-	width:245px;
-	height: 30px;
+	width:64%;
+	height: 3.0rem;
 	position: absolute;
 	left: 0;
 	top:0;
@@ -49,30 +73,30 @@
 	right: 0;
 	margin: auto;
 	color: rgb(146,146,146);
-	font-size: 14px;
+	font-size: 1.4rem;
 
 }
 .nav-search input{
-	width:213px;
-	line-height: 30px;
-	border-radius:18px;
+	width:87%;
+	line-height: 3.0rem;
+	border-radius:1.8rem;
 	border:none;
-	padding-left:32px;
+	padding-left:3rem;
 }
 .nav-search input:focus{
 	outline: none;
 }
 .nav-search i{
 	position: absolute;
-	top:8px;
-	left: 13px;
+	top:.8rem;
+	left: 1.3rem;
 }
 .nav-menu{
-	height: 22px;
-	width: 27px;
+	height: 2.2rem;
+	width: 2.7rem;
 	background-image: url(../img/menu.jpg) ;
-	background-size:27px 22px; 
-	margin:14px 18px 0 0;
+	background-size:2.7rem 2.2rem; 
+	margin:1.4rem 1.8rem 0 0;
 	float:right;
 	cursor: pointer;
 }
@@ -80,13 +104,13 @@
 /*主体样式*/
 
 .header{
-	height: 36px;
+	height: 3.6rem;
 	width: 100%;
-	margin:50px 0 10px 0;
+	margin:5.0rem 0 1.0rem 0;
 	background-color: rgb(249,249,249)
 }
 .header div{
-	margin-left: 15px;
+	margin-left: 1.5rem;
 	
 	
 	
@@ -94,23 +118,23 @@
 } 
 .header a{
 	display: block;
-	height: 34px;
-	line-height: 34px;
+	height: 3.4rem;
+	line-height: 3.4rem;
 	text-decoration: none;
-	border-bottom: 2px solid rgb(243,62,62);
+	border-bottom: .2rem solid rgb(243,62,62);
 	color: rgb(243,62,62);
 }
 
 .refresh{
-	height:28px;
-	width:225px;
+	height:2.8rem;
+	width:22.5rem;
 	margin: 0 auto;
-	font-size: 13px;
+	font-size: 1.3rem;
 	background-color: rgb(243,62,62);
 	color:white;
-	line-height: 28px;
+	line-height: 2.8rem;
 	text-align: center;
-	border-radius:18px;
+	border-radius:1.8rem;
 	cursor:pointer;
 
 }
@@ -118,13 +142,13 @@
 /*商品一览*/
 
 .wrapper-com{
-	margin:0 15px;
+	margin:0 1.5rem;
 }
 .wrapper-com>div{
-	/*margin-bottom: 8px;*/
-	padding-bottom: 8px;
+	/*margin-bottom: .8rem;*/
+	padding-bottom: .8rem;
 	position: relative;
-	border-bottom: 1px solid rgb(240,240,240);
+	border-bottom: .1rem solid rgb(240,240,240);
 }
 .wrapper-com>div:after{
 	content:"";
@@ -134,23 +158,23 @@
 
 }
 .wrapper-com .com-img{
-	margin-top: 22px;
+	margin-top: 2.2rem;
 	float: left;
 }
 .wrapper-com .com-img a{
 	background-image: url(../img/bean.jpg);
-	background-size: 100px 100px;
+	background-size: 10.0rem 10.0rem;
 	display: block;
-	height: 100px;
-	width:100px;
+	height: 10.0rem;
+	width:10.0rem;
 }
 .com-status{
-	height: 30px;
-	width: 235px;
-	font-size: 13px;
-	padding-left:10px;
-	line-height: 30px;
-	float:right;
+	height: 3.0rem;
+	width: 50%;
+	font-size: 1.3rem;
+	padding-left:0.5rem;
+	line-height: 3.0rem;
+	float:left;
 	color:rgb(146,146,146); 
 }
 
@@ -160,37 +184,37 @@
 }
 
 .com-name{
-	height: 37px;
-	font-size: 14px;
-	width:210px;
-	padding:0 25px 0 10px;
-	float: right;
+	height: 3.7rem;
+	font-size: 1.4rem;
+	/*width:60%;*/
+	margin:0 0 0 0.5rem;
+	float: left;
 }
 
 .com-name a{
 	text-decoration: none;
 		color:black;
-		line-height: 20px;
+		line-height: 2.0rem;
 
 }
 
 .com-price{
-	padding: 15px 0 0 10px;
-	width:235px;
-	height: 42px;
-	float: right;
+	padding: 1.5rem 0 0 0.5rem;
+	/*width:50%;*/
+	height: 4.2rem;
+	float: left;
 }
 .com-minprice{
-	margin-top: 10px;
+	margin-top: 1.0rem;
 }
 .com-curve{
-	height: 18px;
-	width:71px;
+	height: 1.8rem;
+	width:7.1rem;
 	position: absolute;
-	bottom: 10px;
+	bottom: 1.0rem;
 	right: 0;
-	line-height: 18px;
+	line-height: 1.8rem;
 	text-align: center;
 	background-color:rgb(240,240,240);
-	border-radius:4px;
+	border-radius:.4rem;
 }
