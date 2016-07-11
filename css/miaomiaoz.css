@@ -79,22 +79,21 @@ body{
 	margin-top:1rem;
 	margin-left: -30%;
 	color: rgb(146,146,146);
-	font-size: 1.4rem;
 }
 .nav-search input{
 	width:87%;
 	line-height: 3.0rem;
 	border-radius:1.8rem;
 	border:none;
-	padding-left:3rem;
-	font-size: 1.2rem;
+	padding-left:13%;
+
 }
 .nav-search input:focus{
 	outline: none;
 }
 .nav-search i{
 	position: absolute;
-	top:.8rem;
+	top:0.9rem;
 	left: 1.2rem;
 }
 .nav-menu{
