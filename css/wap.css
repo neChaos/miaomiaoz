@@ -1,0 +1,223 @@
+body{min-width: 320px;background: white;font-family: PingFang SC;}
+.cl:after{content:'';display:block;visibility:hidden;clear:both;}
+.cl{*zoom:1;}
+.fl{float:left;}
+.fr{float:right;}
+a{text-decoration: none;}
+.blue{color: #5188a6;}
+#bd{overflow: hidden;width: 100%;position: relative;}
+footer p{height: 50px;line-height: 50px; text-align: center;color: #929292;background: #eee;font-size: 12px;}
+.index-bg{background: url(http://img.miaomiaoz.com/img/show/b9bdcb94b65a44512484df553c6cda95) no-repeat;}
+/* 头部按钮*/
+header{position: relative;padding-left:12px;background:#f43d3f;display: -webkit-flex;display: -webkit-box; display: flex;}
+header .logo{display: block;width: 53px;height:23px;margin:14px 12px 13px 0;background: url(http://img.miaomiaoz.com/img/show/a12584a65dbbe0617ee946a7b1892dfc) no-repeat;background-size: 50px 22px;}
+header .search{-webkit-box-flex: 1;-webkit-flex: 1;  flex:1;margin-right: 5px;position: relative;}
+header .search .ipt{width: 100%;line-height: 30px; height: 30px;padding:0 25px;margin:10px 0;border-radius: 26px;border: none;text-indent: 14px;font-size: 14px;}
+header .search input::-webkit-search-cancel-button {display: none;}
+header .search:before{width: 16px;height: 16px; content: "";position: absolute;top:25px;margin-top: -8px;left: 13px;  display: inline-block;background: url(http://img.miaomiaoz.com/img/show/b9bdcb94b65a44512484df553c6cda95) no-repeat;background-size: 25px;background-position: 0 -88px;}
+header .search .fork{ display: none;width: 16px;height: 16px;  padding: 5px; position: absolute;top:25px;margin-top: -12px;right: 8px; background: url(http://img.miaomiaoz.com/img/show/b9bdcb94b65a44512484df553c6cda95) no-repeat;background-size: 25px;background-position: 0 0;background-origin: content-box;}
+header .menu{width:47px;height:50px;text-align: center;}
+header .menu.selected{background: #fff;}
+header .menu.selected .icon{background-size: 20px;height: 20px;background-position: 0 -168px;}
+header .menu .icon{display: inline-block;width: 20px;height: 15px;margin-top: 17px; background: url(http://img.miaomiaoz.com/img/show/b9bdcb94b65a44512484df553c6cda95) no-repeat;background-size:23px;background-position: 0 -40px; }
+/*header .goback-wrap{margin-left:-10px; }*/
+header .goback-wrap{display: block;padding: 12px 15px 12px 0px;}
+header .goback{/*margin:12px 15px 12px 0;*/display:block;width: 10px;height: 16px;padding: 5px 5px 5px 0;background: url(http://img.miaomiaoz.com/img/show/b9bdcb94b65a44512484df553c6cda95) no-repeat;background-size: 25px;background-origin: content-box;background-position: 0 -18px;}
+header .space{width: 12px;height: 50px;}
+
+header .text{line-height: 50px;height: 50px;-webkit-box-flex: 1;-webkit-flex: 1; flex:1; font-size: 22px;color: #fff;text-align: center;}
+
+/* 分类*/
+/*.cate{display: -webkit-flex; display: flex;background: #f9f9f9;}
+.cate li{text-align: center;}
+.cate .cate-item{-webkit-box-flex:1;flex:1;}
+.cate li a{display: inline-block;padding: 15px 5px;text-decoration: none;}
+.cate li.selected a{border-bottom:1px solid #f33e3e;}
+.cate .select{float: right;width: 74px;}*/
+.cate-wrap{background: #f0f0f0;position: relative;}
+.cate .scroll-wrap,.cate-child .scroll-wrap{overflow: hidden;overflow-x:scroll;position:relative;}
+.cate .scroll-wrap::-webkit-scrollbar,.cate-child .scroll-wrap::-webkit-scrollbar{display: none}
+.cate .cate-list,.cate-child .sub-list{white-space:nowrap;}
+.cate .cate-list li{display: inline-block;margin: 0 13px;}
+.cate .cate-list li a{display: inline-block; color: #333333;font-size: 16px;height: 36px;line-height: 36px;}
+.cate .cate-list li.cur{border-bottom: 2px solid #f33e3e;}
+.cate .cate-list li.cur a{font-weight: bold;color: #f33e3e;}
+.cate .select{float: right;width: 40px;height: 36px; text-align: center;}
+.cate .select .icon{width: 10px;height:10px;display: inline-block;margin-top:14px;background: url(http://img.miaomiaoz.com/img/show/b9bdcb94b65a44512484df553c6cda95) no-repeat;background-size:25px;background-position: 0 -126px;}
+
+
+.cate-child{/*display: none;*/}
+.cate-child{background: #f4f4f4;}
+.cate-child .sub-list li{display: inline-block;}
+.cate-child .sub-list li a{line-height: 30px;height: 30px;padding: 0 12px;display: inline-block;color: #666666;font-size: 14px;}
+.cate-child .sub-list li:after{content: ""; height: 15px;display: inline-block;vertical-align: middle;border-left: 1px solid #dddddd;}
+.cate-child .sub-list li:last-child:after{display: none;content: "";}
+.cate-child .sub-list li.cur a{color: #f33e3e;}
+
+.cate-spread{display: none;position: absolute;height:74px; top:0;background: #f9f9f9;}
+.cate-spread .cate-list li{float: left;margin:0 13px; }
+.cate-spread .cate-list li a{display: inline-block; color: #333333;font-size: 16px;height: 36px;line-height: 36px;}
+.cate-spread .select{float: right;width: 40px;height: 74px;text-align: center;}
+.cate-spread .select .icon{width: 10px;height:10px;display: inline-block;margin-top:40px;background: url(http://img.miaomiaoz.com/img/show/b9bdcb94b65a44512484df553c6cda95) no-repeat;background-size:25px;background-position: 0 -126px;}
+/* 分类下拉*/
+.mask{position: absolute;top:0;bottom: 0;left: 0;right: 0;background: rgba(0,0,0,0.1);}
+#bd.show #nav{left: 0px;}
+
+#nav {position: absolute;width: 100%;left:100%;z-index: 9;background: #fff;transition: left 0.5s;-webkit-transition: left 0.5s;}
+#nav .hd{margin:10px 20px 10px 17px;}
+#nav .avatar{float: left;}
+#nav .avatar img{display: inline-block;height: 40px;width: 40px;border-radius: 50%;vertical-align: middle;}
+#nav .avatar .desc a{font-size: 16px;color: #929292;display: inline-block;}
+#nav .center{float: right;line-height: 40px;}
+#nav .center a{margin-right: 20px;padding-right:20px;font-size: 14px;color: #929292;background: url(http://img.miaomiaoz.com/img/show/b9bdcb94b65a44512484df553c6cda95) no-repeat;background-position: 0 -107px;}
+#nav .bd>div:nth-child(odd){background: #f9f9f9;}
+#nav .bd .title{padding: 12px 17px; font-size: 16px;color: #333333;}
+#nav .bd .title a{border-left: 2px solid #909090;color: #333333;padding-left: 10px;}
+#nav .bd .cate-name{height: 22px;line-height: 22px;font-size: 16px;}
+#nav .bd .cate-name a{margin-left:29px; color:#000;}
+#nav .bd  .cate-item{line-height: 30px;font-size: 14px;padding-left: 29px;}
+#nav .bd  .cate-item a{float: left; color: #929292;margin-right: 12px;}
+
+
+/*搜索页面*/
+.search-pre{padding:0 15px;background: #fff; display: none;}
+.search-pre h2{font-size: 14px;height: 40px;line-height: 40px;color: #333333;}
+
+.search-err{padding: 24px 36px;background: #fff;display: none;}
+.search-err p{line-height: 20px;height: 20px;text-align: center;font-size: 14px;color: #929292;}
+.search-err h2{height: 40px;line-height: 40px; color: #333333;font-size: 14px;text-align: center;}
+.search-err .hot-word{text-align: center;}
+.search-err .hot-word a{float: none;display: inline-block;}
+
+.search-res{display: none;}
+.search-ing{display: none;background: #fff;}
+.search-ing .suggest li{padding: 0 16px; }
+.search-ing .suggest li a{display: block; height: 44px;line-height: 44px;color: #333333;font-size: 14px;border-bottom: 1px solid #dddddd;}
+
+.hot-word{margin: 0 auto;}
+.hot-word a{float: left;height: 36px;line-height:36px;padding: 0 12px;margin: 0 10px 10px 0; color: #666666;font-size: 14px;border:1px solid #dddddd;}
+
+
+/* 文章列表*/
+.list .hd{height: 50px;line-height: 50px;font-size: 18px; color: #333333;border-bottom:1px solid #dddddd;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+/*.list .search-title{display: -webkit-flex;display: -webkit-box; display: flex;}*/
+/*.list .search-title:after,.list .search-title:before{display: block;overflow: hidden;}
+.list .search-title:after{content: attr(after);width: 110px;}
+.list .search-title:before{content: attr(before);width: 32px;height: 50px;}*/
+.list .more{height: 40px;line-height: 40px;font-size: 14px;line-height: 14px;  margin:0 -18px;background: #f9f9f9;color: #929292;text-align: center;}
+.list .more p{line-height: 40px;}
+.article,.goods,.comment{padding: 0 15px;background: #ffffff;}
+.article .article-list li{padding: 10px 0; border-bottom: 1px solid #e8e8e8;}
+.article .article-list li:last-child{border-bottom: none;}
+.article .article-list li a,.good .good-list li a{display: block;}
+.article .article-list .pic{float: left;height: 80px;width:116px;margin-right: 17px; }
+.article .article-list .pic img{width: 100%;height: 100%;}
+.article .article-list .content{overflow: hidden;}
+.article .article-list .content .gd-name{font-size: 14px;line-height: 16px; color: #5188a6;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.article .article-list .content .title{line-height: 20px; height:40px;margin-top: 6px; font-size: 18px;color: #333333;overflow: hidden;}
+.article .article-list .content .meta{line-height: 14px;font-size: 12px;color: #929292;margin-top: 4px;}
+.article .article-list .content .meta span{margin-right: 12px;}
+
+.goods .good-list li{padding: 10px 0;border-bottom: 1px solid #e8e8e8;}
+.goods .good-list li:last-child{border-bottom: none;}
+.goods .good-list .pic{float: left;height:70px; width: 100px;margin-right: 12px;}
+.goods .good-list .pic img{width: 100%;height: 100%;}
+.goods .good-list .content{overflow: hidden;}
+.goods .good-list .content .title{line-height: 16px;height: 32px; font-size: 14px;color: #333333;overflow: hidden;    word-break: break-all;}
+.goods .good-list .content .price{line-height: 14px;margin-top: 4px; font-size: 12px;color: #929292;}
+.goods .good-list .content .price a{color: #5188a6;}
+.goods .good-list .content .meta{line-height: 16px;margin-top: 4px;font-size: 12px;color: #929292;}
+.goods .good-list .content .meta .item{margin-left: 8px;}
+/*.right-go {padding-right: 10px;position: relative;}*/
+/*.goods .good-list .right-go:after{display: inline-block;width:  position: absolute;top: 32px;translate:-50%;background: url(http://img.miaomiaoz.com/img/show/b9bdcb94b65a44512484df553c6cda95) no-repeat;background-size: 25px;background-position: 0 -108px;}
+.loading{text-align: center;background: gray;}*/
+.goods .good-list .right-go{width: 10px;float: right;height: 64px;margin-left: 10px;}
+.goods .good-list .right-go .icon{display: inline-block;margin-top:25px;vertical-align: middle;width: 10px;height:16px;  background: url(http://img.miaomiaoz.com/img/show/b9bdcb94b65a44512484df553c6cda95) no-repeat;background-size: 25px;background-position: 0 -108px;}
+.loading .loading-item{height: 74px;line-height: 74px;}
+
+/*商品页*/
+.goods-detail .content{padding: 10px 15px;background: #ffffff;margin-bottom: 10px;}
+.goods-detail .cover img{width: 100%;}
+.goods-detail .content .title{line-height:24px;font-size: 18px;color: #333333;font-weight: bold;max-height: 48px;overflow: hidden;}
+.goods-detail .content .meta { height:20px;line-height:20px;color: #929292;font-size: 12px;}
+.goods-detail .content .meta .hv{margin-left: 10px;}
+.goods-detail .share {margin: 12px 0;text-align: center;}
+.goods-detail .share p{width: 46%;}
+.goods-detail .share .xl,.goods-detail .share .qq{display:block;line-height: 32px;height: 32px; position: relative;color: #929292;font-size: 14px;border: 1px solid #dddddd;}
+.goods-detail .share .xl:before,.goods-detail .share .qq:before{content:"";width: 20px;height: 20px;margin-right: 8px; display: inline-block;vertical-align: -4px; background: url(http://img.miaomiaoz.com/img/show/b9bdcb94b65a44512484df553c6cda95) no-repeat;background-size:25px;}
+.goods-detail .share .xl:before{background-position: 0 -157px;width: 22px;height: 22px;}
+.goods-detail .share .qq:before{background-position:0 -184px; }
+
+.goods-detail .goods-addres a{display: block;height: 32px;line-height: 32px;text-align: center;background: #f76666;color: #fff;font-size: 14px;}
+
+/* 文章页*/
+.article-detail{padding: 10px 15px 20px 15px;background: #ffffff;margin:10px 0;}
+.article-detail .title{max-height:60px;line-height: 30px;font-size: 24px;overflow:hidden;color: #333333;word-break: break-all;}
+.article-detail .meta{margin-top:10px;line-height: 26px;color: #929292;font-size: 12px;}
+.article-detail .meta .avatar{margin-right: 10px;}
+.article-detail .meta .avatar img{width: 26px;height: 26px;border-radius: 50%;}
+.article-detail .meta .source,.article-detail .meta .name,.article-detail .meta .gd{margin-right: 12px;}
+.article-detail .meta a{color: #5188a6;}
+.article-detail .meta a.name{color: #929292;}
+
+.article-detail .share {margin-top: 30px;text-align: center;}
+.article-detail .share p{width: 46%;}
+.article-detail .share .xl,.article-detail .share .qq{display:block;line-height: 32px;height: 32px;position: relative;color: #929292;font-size: 14px;border: 1px solid #dddddd;}
+.article-detail .share .xl:before,.article-detail .share .qq:before{content:"";width: 20px;height: 20px;margin-right: 8px; display: inline-block;vertical-align: -4px; background: url(http://img.miaomiaoz.com/img/show/b9bdcb94b65a44512484df553c6cda95) no-repeat;background-size:25px;}
+.article-detail .share .xl:before{background-position: 0 -157px;width: 22px;height: 22px; }
+.article-detail .share .qq:before{background-position:0 -184px; }
+
+.article-detail .content{line-height: 28px;font-size: 18px;color: #333333;}
+.article-detail .content img{width: 100%;}
+.article-detail .content .emoji{width: 24px;height: 24px;}
+.article-detail .content p{margin: 20px 0;word-break:break-all;}
+.article-detail .content embed,object,video,iframe{width: 100%;}
+.article-detail .content iframe[src$="html"]{display:block;margin:0;padding:0;height:500px!important;width:100%;overflow-x: scroll;}
+.article-detail .content table{width: 100%;border: 1px solid #d8d8d8;border-left: 0;border-top: 0;font-size: 14px;border-collapse: separate;border-spacing: 0;}
+.article-detail .content table td{border-left:1px solid #d8d8d8;padding: 10px 0 10px 20px;line-height: 20px;text-align: left;}
+.article-detail .content table tr:nth-child(odd){background: #f4f4f4;}
+/*评论列表*/
+.comment{margin-bottom: 10px;}
+.comment-list li{border-bottom: 1px solid #ddd;}
+.comment-list li:last-child{border: none;}
+.comment-list .avatar{width:32px;height: 32px;float: left;margin: 15px 14px 0 0;}
+.comment-list .avatar img{width: 100%;height: 100%;border-radius: 50%;}
+.comment-list .content{overflow: hidden;padding: 20px 0;}
+.comment-list .content .meta{line-height: 16px;color: #929292;font-size: 12px;}
+.comment-list .content .meta .name{font-size: 14px;color: #929292;}
+.comment-list .content .meta .time{margin-left: 10px;}
+.comment-list .content .meta .zan{margin-right: 10px;float: right;}
+.comment-list .content .cmt-wrap{overflow: hidden;position: relative;}
+.comment-list .content .cmt-wrap .cmt{line-height: 24px;font-size: 18px;color: #333333; word-break: break-all;}
+.comment-list .content .cmt-wrap .cmt .deleted {font-size: 14px;line-height: 20px;display: inline-block;height: 20px;color: #929292;background-color: #f4f4f4;border-radius: 6px;padding: 0 10px;vertical-align: text-bottom;margin-left: 10px;word-break: break-all;word-wrap: break-word;white-space: nowrap;}
+.comment-list .content .cmt-wrap .spread{display: none;bottom: 0;right: 0;height:24px;line-height: 24px;padding-left: 15px;position: absolute;font-size: 12px; background: url(http://img.miaomiaoz.com/img/show/b9bdcb94b65a44512484df553c6cda95) no-repeat;background-size: 25px;background-position:0 -118px;background-color: #fff; }
+.comment-list .content .cmt-wrap .spread:before{display: inline-block;content: "...";position: absolute;left: -36px;width: 36px;background: #fff;}
+
+/*center.html*/
+.info{background: #fff;padding: 20px 0;margin-bottom: 10px;}
+.info>div{margin: 0 auto;text-align: center;}
+.info .avatar{width: 62px;height: 62px;margin-bottom: 10px;}
+.info .avatar img{width: 100%;height: 100%;border-radius: 50%;}
+.info .name{font-size: 16px;color: #333333;}
+.info .desc{width: 230px; margin-top:20px;color: #929292;font-size: 12px;text-align: left;}
+
+.panel .hd{display: -webkit-box;display: flex;padding: 0 15px; line-height: 40px;text-align: center;color: #333;font-size: 18px;background: #fff;}
+.panel .hd .item{-webkit-box-flex: 1;flex:1;color: #333;}
+.panel .hd .item.cur{color:#f33e3e;border-bottom: 1px solid #f33e3e; }
+
+.panel .bd .err{line-height: 80px;color: #929292;text-align: center;display: none;}
+#pss,#fav{display: none;}
+
+
+/*404页面*/
+.not-found{margin: 90px 40px 0 40px;text-align: center;}
+.not-found img{width: 100%;}
+.not-found a{display: inline-block; height: 32px;line-height: 32px;margin-top: 25px;background: #f33e3e;padding: 0 16px;color: #fff;font-size: 16px;border-radius: 2px;}
+/* 针对某些不兼容问题打的补丁*/
+@media screen and (max-width:350px)
+{
+	.goods .good-list .content .meta .item{
+		display: none;
+	}
+}
+
