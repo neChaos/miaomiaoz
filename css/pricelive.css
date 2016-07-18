@@ -1,12 +1,13 @@
-.col{
+html body{
+	background-color:white;
+}
+.title-name{
 	height: 36px;
-	width: 100%;
 	margin:0 0 10px 0;
 	background-color: rgb(249,249,249);
 	border-bottom: 1px solid #E8E8E8 ;
 }
-
-.col span{
+.title-name span{
 	display: block;
 	height: 34px;
 	line-height: 34px;
@@ -18,12 +19,12 @@
 	float: left;
 
 }
-.msg{
+.refresh{
 
 	height:28px;
 	text-align: center;
 }
-.msg .link{
+.refresh .link{
 	display: inline-block;
 	background-color: rgb(243,62,62);
 	color:white;
@@ -65,16 +66,7 @@
 	display: table-cell;
 	vertical-align: middle;
 	text-align: center;
-	
-	/*float:left;*/
-
 }
-
-/*.article-list .item .pic img{
-
-	display: block;
-	margin:0 auto;
-}*/
 
 .article-list .item .list{
 	margin-left: 110px;
@@ -98,6 +90,8 @@
 }
 
 .article-list .item .list .name{
+	max-height:40px;
+	overflow:hidden;
 	font-size: 14px;
 	color:black;
 
@@ -116,18 +110,90 @@
 }
 
 .article-list .item .btn{
-	/*height:19px;
-	width:75px;
-	position:absolute;*/
 	display:inline-block;
 	background-color:rgb(240,240,240);
 	color:rgb(146,146,146);
 	font-size: 13px;
-	/*line-height: 19px;*/
 	text-align: center;
 	border-radius: 4px;
 	float:right;
 	padding: 0 10px;
-	/*bottom:9px;
-	right: 0;*/
+}
+/*复制过来的*/
+.pricetrend{
+	font-size: 12px;
+	font-style:normal;
+	font-family:'Microsoft YaHei';
+	background:#fff;
+	color:#333;
+	line-height:normal;
+}
+.pricetrend a{ 
+	color:#333; 
+	text-decoration:none;
+	display:inline-block;
+}
+.pricetrend .chrome-price{
+	min-width:290px;
+}
+.title-bar{ 
+	height:26px;
+	line-height:26px;
+	font-size:14px;
+	font-weight:bold;
+	padding-left:10px;
+}
+.title-bar span{ 
+	display:block;
+	width:180px;
+}
+.content-pane{
+	position:relative; 
+	height:145px;
+}
+.chart{
+	background-color:#fff;
+	width: 84%;
+	position: relative;
+	height: 145px;
+	float: left;
+	z-index:9;}
+.rightWord{
+	width: auto;
+	margin-left: 84%;
+	height: 145px;
+	white-space: nowrap;
+	line-height:normal;
+	text-align: center;
+}
+.rightWord .high{
+	margin-top:10px;
+}
+.rightWord .low{ 
+	margin-top:40px;
+}
+
+/*回到顶部按钮*/
+
+.backTop{
+
+	position: fixed;
+	height: 28px;
+	width: 40px;
+	bottom: 45px;
+	right: 45px;
+	border-radius: 5px;
+	padding-top:12px;
+	text-align: center;
+	border: 1px solid rgb(240,240,240);
+
+}
+
+/*隐藏trend*/
+
+.hidden{
+
+	visibility: hidden;
+	position: fixed;
+	left: -1000px;
 }
