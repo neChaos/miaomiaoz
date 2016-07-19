@@ -42,9 +42,29 @@
 			  <div class="price">'+data.prod_price_txt2+'<span class="btn" id='+data.id+'>价格走势</span></div></div></a>\
 			  <div class="pricetrend hidden" id="pricetrend'+data.id+'"></div></li>';
 
-			  $(".article-list").append(html);  
+			  $(".article-list").append(html);
 
-	  		this.loadPricetrend(data.data,data);
+				var upDate = data.prod_pricecut_date.slice(8,10);
+
+				var len=data.data.pcinfo.info.length;
+
+				//获取最近降价点
+				for(var i=1;i<=len;i++){
+
+					if(data.data.pcinfo.info[len-i].dt.slice(8,10)==upDate){
+
+						data.data.pcinfo.ed=data.data.pcinfo.info[len-i].dt;
+
+						data.data.pcinfo.info[len-i].pr=data.prod_price;
+
+						data.data.pcinfo.info.splice(len-i+1);
+
+						break;
+
+					}
+				}
+
+	  			this.loadPricetrend(data.data,data);
 
 
 			  $('#pricetrend'+data.id).hide();
@@ -93,53 +113,47 @@
 
 		// 获取商品更新价格时间间隔
 
-		this.getTimeLag=function(time){
-
-			// 获取商品更新时间
-
-			var time1 = new Date(time.replace(/-/g,"/")).getTime()/1000;
-
-			// 获取系统时间
-
-			var time2 = serviceTime/1000;
-
-			var time3 = time2 - time1;
-
-			if(time3>=86400){
-
-				var d = Math.floor(time3/86400);
-
-				if(d<2&&d>=1){
-
-					return "昨天";
-
-				}else if(d>=2&& d<3){
-
-					return "前天";
-
-				} else {
-
-					return d+"天前";
-
+		this.getTimeLag=function(t){
+			
+				var time = (new Date(t.replace(/-/g,'/'))).getTime() / 1000;
+				var date = new Date(serviceTime);
+				var now = date.getTime() / 1000;
+				var year = date.getFullYear();
+				var month = date.getMonth() + 1;
+				var day = date.getDate();
+				var today = (new Date(year + '/'+month + '/' + day)).getTime() / 1000;
+				var t = 0;
+				var timeStr = '';
+				if(time >= today ){//今天
+					t = now - time;
+					if(t>0 && t<60){ //小于1分钟
+						timeStr = t + '秒前';
+					}else if(t>=60 && t<60*60){//大于等于1分钟，小于1小时
+						timeStr = Math.floor(t/60) + '分钟前';
+					}else if(t>=60*60 && t<60*60*24){//大于等于1小时，小于1天
+						var h = Math.floor(t/(60*60)); 
+						//var m = Math.floor((t - h*60*60)/60);
+						//m = m < 10 ? '0' + m : m;
+						//timeStr = h + ':'+m;
+						timeStr = h + '小时前';
+					}else{
+						timeStr = '刚刚';
+					}
+				}else{
+					t = Math.floor((today - time) / 86400);
+					switch(t){
+						case 0 :
+							timeStr = '昨天';
+							break;
+						case 1 :
+							timeStr = '前天';
+							break;
+						default :
+							timeStr = '3天前';
+					}
 				}
-			} else if(time3>=3600){
-
-				return Math.floor(time3/3600)+"小时前";
-
-			} else if(time3>=60){
-
-				return Math.floor(time3/60) +"分钟前";
-
-			}else if(time3<60&&time3>0){
-
-				return Math.floor(time3)+"秒前";
-			}else{
-				// 假如出错返回空字符串
-				return "";
-
+				return timeStr;
 			}
-
-		};
 
 		// 画trend图
 
