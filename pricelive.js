@@ -114,7 +114,7 @@
 		// 获取商品更新价格时间间隔
 
 		this.getTimeLag=function(t){
-			
+
 				var time = (new Date(t.replace(/-/g,'/'))).getTime() / 1000;
 				var date = new Date(serviceTime);
 				var now = date.getTime() / 1000;
